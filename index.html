@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아악 하기시러 / 부트스트랩 광고웹앱</title>
+    <!-- 폰트 + 플러그인 삽입 -->
+    <link rel="stylesheet" href="./css/bootstrap_4.6.css">
+    <link rel="stylesheet" href="./plugin/swiper/swiper-bundle_8.css">
+    <link rel="stylesheet" href="./css/basic.css">
+
+    <!-- 중요한게 아래로 들어가야함 아래쪽에 있는게 순위가 났다. -->
+    <!-- 자바스크립트가 워낙 무거워서 외국은 바디에 자바링크가 들어감 -->
+    <!-- 우리나라는 그냥 css -> 제이쿼리 -> 자바스크립트 순으로 헤드안에 들어감 -->
+    <script src="./plugin/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/jquery-2.2.4.js"></script>
+    <script src="./js/basic.js"></script>
+</head>
+<body>
+        <!-- 메인슬라이드 제이쿼리 지양한 플러그인 사용함 -->
+        <!-- 광고웹앱 특성상 -->
+    <div class="swiper" id="mainBanner">
+        <div class="swiper-wrapper"> <!-- 클래스명을 이어서 써주면 됨 -->
+            <!-- 객체가 되는 애들임 이름바꾸면 안됨 -->
+            <div class="swiper-slide">광고</div>
+            <div class="swiper-slide">아이템1</div>
+            <div class="swiper-slide">이미지</div>
+        </div>
+        <!-- 필요할수도 있으니 지우지 말것 -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- 앞 뒤 버튼 자바로 명령할 수 있음 지우지 말것 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+        <!-- 하단 슬라이드 바 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+            });
+    </script>
+</body>
+</html>

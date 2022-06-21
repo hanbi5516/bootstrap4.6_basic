@@ -1,0 +1,11 @@
+*.psd
+origin/
+plan.pdf
+plan_*.pdf
+
+ssrc/svg/logo.*
+
+*/img/
+img/
+*.asf
+*.hwp
